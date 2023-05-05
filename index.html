@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous" defer></script>
+    <link href="css/style.css" rel="stylesheet">
+    <title>Cadastro de Usuário</title>
+</head>
+
+<body>
+    <form class="needs-validation" id="form" novalidate>
+        <h1>Cadastro de Usuários</h1>
+        <div class="row">
+            <div class="col">
+                <label>Primeiro Nome</label>
+                <input id="primeiroNome" type="text" class="form-control" pattern="[a-z\s]+$" required>
+                <div class="invalid-feedback">
+                    Você deve informar o nome.
+                </div>
+                <div class="valid-feedback">
+                    Correto!
+                </div>
+            </div>
+            <div class="col">
+                <label>Último Nome</label>
+                <input id="ultimoNome" type="text" class="form-control" pattern="[a-z\s]+$" required>
+                <div class="invalid-feedback">
+                    Você deve informar o Último Nome.
+                </div>
+                <div class="valid-feedback">
+                    Correto!
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <label>Email</label>
+                <input id="email" type="email" class="form-control" required>
+                <div class="invalid-feedback">
+                    Email obrigatório.
+                </div>
+                <div class="valid-feedback">
+                    Correto!
+                </div>
+            </div>
+            <div class="col">
+                <label>Senha</label>
+                <input id="senha" type="password" class="form-control" pattern="^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$" required>
+                <div class="invalid-feedback">
+                    Você deve informar a senha.
+                </div>
+                <div class="valid-feedback">
+                    Correto!
+                </div>
+
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <label>Endereço</label>
+                <input id="endereco" type="text" class="form-control" required>
+                <div class="invalid-feedback">
+                    Você deve informar o Endereço
+                </div>
+                <div class="valid-feedback">
+                    Correto!
+                </div>
+
+            </div>
+            <div class="col-md-2">
+                <label>Número</label>
+                <input id="numero" type="text" class="form-control" pattern="[0-9]+$" required>
+                <div class="invalid-feedback">
+                   Número obrigatório.
+                </div>
+                <div class="valid-feedback">
+                    Correto!
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-3">
+                <label for="inputUf" class="form-label">UF</label>
+                <select id="uf" class="form-select" required>
+                </select>
+                <div class="invalid-feedback">
+                    Você deve selecionar a UF.
+                </div>
+                <div class="valid-feedback">
+                    Correto!
+                </div>
+
+            </div>
+            <div class="col-md-6">
+                <label for="inputCidade" class="form-label">Cidade</label>
+                <select id="cidade" class="form-select" required>
+                </select>
+                <div class="invalid-feedback">
+                    Você deve selecionar a cidade.
+                </div>
+                <div class="valid-feedback">
+                    Correto!
+                </div>
+            </div>
+            <div class="col-md-3">
+                <label for="inputBairro" class="form-label">Bairro</label>
+                <select id="bairro" class="form-select" required>
+                </select>
+                <div class="invalid-feedback">
+                    Você deve selecionar o bairro.
+                </div>
+                <div class="valid-feedback">
+                    Correto!
+                </div>
+                
+            </div>
+        </div>
+        <button class="btn btn-primary" type="submit" id="btnCadastrar">Cadastrar</button>
+    </form>
+
+    <script type="module" src="./script/app.js"></script>
+    <script src="./script/componentes/validacao.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;700&display=swap');
+
+*{
+    padding:0;
+    margin:0;
+    border:0;
+    font-family: 'Poppins', sans-serif;
+}
+
+h1{
+    font-weight: 700;
+}
+
+#form{
+    width: 50vw;
+    height: 50vh;
+    margin: 0 auto;
+}
+
+#btnCadastrar{
+    margin-top: 15px;
+}
+
